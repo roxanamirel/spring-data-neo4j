@@ -78,6 +78,7 @@ public class VertexServiceImpl implements VertexService {
 			Collections.sort(curr.getTeammates(),new EdgeComparator());
 			
 			for(Edge e: curr.getTeammates()){
+				if(teammates.size()==3) return teammates;
 				teammates.add(e.getDest().getEmail());
 			}
 		
