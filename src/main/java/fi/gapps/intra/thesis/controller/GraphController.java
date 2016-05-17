@@ -60,6 +60,12 @@ public class GraphController {
 			
 			System.out.println("I have been called!!!");
 			System.out.println(vertices);
+			try {
+				TaskQueueSample.run();
+			} catch (Exception e) {
+				System.err.println(e.getMessage());
+				e.printStackTrace();
+			}
 		}
 	
 
